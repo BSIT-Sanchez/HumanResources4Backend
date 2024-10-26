@@ -3,12 +3,12 @@ const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const cors = require("cors");
-const EmployeeModel = require("./model/Employee");
-const overtimeRoutes = require("./routes/overtimeRoutes");
-const leaveRoutes = require('./routes/leaveRoutes');
-const benefitsRoutes = require("./routes/benefitsRoutes");
-const incentivesRoutes = require('./routes/incentivesRoutes');
-const shiftRoutes = require('./routes/shiftRoutes');
+const EmployeeModel = require("./model/Employee.js");
+const overtimeRoutes = require("./routes/overtimeRoutes.js");
+const leaveRoutes = require('./routes/leaveRoutes.js');
+const benefitsRoutes = require("./routes/benefitsRoutes.js");
+const incentivesRoutes = require('./routes/incentivesRoutes.js');
+const shiftRoutes = require('./routes/shiftRoutes.js');
 require('dotenv').config(); // Import dotenv to read .env file
 
 const app = express();
