@@ -26,6 +26,11 @@ mongoose.connect(process.env.MONGODB_URL); // Use environment variable for Mongo
 const JWT_SECRET = process.env.JWT_SECRET; // Use environment variable for JWT secret
 const PORT = process.env.PORT || 8055; // Use environment variable for port
 
+app.use("/",(req,res) => {
+    res.send(`Api Running on ${PORT}`);
+
+})
+
 // Middleware 
 const authenticateJWT = (req, res, next) => {
     const token = req.header("Authorization")?.split(" ")[1]; 
@@ -82,6 +87,7 @@ app.post("/register", async (req, res) => {
         res.status(500).json(err);
     }
 });
+
 
 
 app.get("/protected", authenticateJWT, (req, res) => {
