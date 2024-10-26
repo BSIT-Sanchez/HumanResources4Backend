@@ -15,7 +15,7 @@ const app = express();
 app.use(express.json());
 app.use(cors(
     {
-        origin: ["https://deploy"],
+        origin: ["https://human-resources4-backend.vercel.app"],
         methods: ['POST', 'GET'],
         credentials: true
     }
